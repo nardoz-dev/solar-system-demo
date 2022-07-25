@@ -18,6 +18,7 @@ let fov, aspect, near,far;                              // camera settings
 let controls, controls_2;                               // controls orbits for the first and second scene
 let character;                                          // character (scene 2)
 let spotLight;                                          // spotlight (scene 2)
+let global_name;                                        // to avoid a little bug (on click del close and test physic)
 
 // ANIMATION VARIABLES
 let walkForward_l, walkForward_r;
@@ -123,6 +124,18 @@ function handlerMain(){
             sound.play();
             document.getElementById('button_volume').innerHTML = '<i class="material-icons" style="color:#000000;font-size: 2.6rem;">volume_up</i>';
           }
+    }
+            
+    //Enable TestPhysic button - special features !    
+    document.getElementById('testPhysic').onclick = () => {
+        document.getElementById('descriptionContainer').style.display='none';           // to leave the box description
+        newScene(global_name);
+    }
+
+    document.getElementById('closeDescription').onclick = () => {
+        document.getElementById('descriptionContainer').style.display='none';           // to leave the box description
+        handlerControls(controlsButton,9);
+        flagStop = false;
     }
      
 }
@@ -591,6 +604,7 @@ function fitCameraToSelection( camera,controls,object,fitOffset){
 }
 function showDetails(name){
     if(name){
+        global_name = name;
         let namePlanet = document.querySelector('#namePlanet');
         let descriptionInfo = document.querySelector('#descriptionInfo');
         let description;
@@ -631,12 +645,7 @@ function showDetails(name){
         //ADDING THE CORRECT DESCRIPTION INFO TO HTML TAG
         descriptionInfo.innerHTML = description;
 
-        //Enable TestPhysic button - special features !
-        
-        document.getElementById('testPhysic').onclick = () => {
-            document.getElementById('descriptionContainer').style.display='none';           // to leave the box description
-            newScene(name);
-        }
+
         
     }
 }
