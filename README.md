@@ -3,7 +3,7 @@
 This is a project powered by Three.js.
 Not scale based on real astronomical data.
 
-Fully [demo]() of the project. 
+Fully [demo](https://nardoz-dev.github.io/solar-system-demo/) of the project. 
 
 ## Members
 
