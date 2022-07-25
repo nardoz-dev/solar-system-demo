@@ -1,5 +1,7 @@
 # SolarSystem Demo
-`SolarSystem Demo` - Personal project made for fun.  Completely dev with Three JS.
+`SolarSystem Demo` - Personal project made for fun.  
+This is a project powered by Three.js.
+Not scale based on real astronomical data.
 
 Fully [demo]() of the project. 
 
