@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+      <title> SpaceTeam </title>
+      <link rel="stylesheet" href="style/main.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="shortcut icon" href="#">
+    </head>
+
+
+    <body>
+      
+      <button id="button_volume" style="display:block"><i class="material-icons" style="color:#000000;font-size: 2.6rem;">volume_off</i></button>
+      
+   
+
+      <div id="container" class="container">
+        <div class="content">
+          <h1>SPACE TEAM</h1>
+          <h3>A solar system refers to a star and all the objects that travel in orbit around it.
+              Our solar system is located within the Orion Arm of the Milky Way Galaxy, which is located about 27,000 light-years away from the Milky Way Galactic Center.
+            <br>
+            This is a project powered by Three.js 
+            <br>
+            For a better viewing experience, use a laptop or desktop with the latest version of Google Chrome.
+          </h3>
+          <p class="buttoncontainer"> <button id="button_view" class="custom-btn btn-12"><span>Click!</span><span>View Demo</span> </button></p>
+        </div>
+        <div class="flap"></div>
+      </div>
+  
+      <section id="loading-screen">
+          <div id="loader"></div>
+      </section>
+      
+
+      <!-- CANVAS MAIN CONTAINER -->
+      <div>
+        <canvas id="c" height="100" width="800";>
+        </canvas>
+
+        <div id="info" style="display:none">
+          <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> Space Demo<br />
+          <p>
+            Left Mouse Button : select planet - Drag : move camera - Right Mouse Button : translate camera
+          </p>
+        </div>
+
+        <div id='moveGUI'>
+        </div>
+      </div>
+     
+
+      <div class="container2" id="descriptionContainer" style = "display:none" > 
+        <div class="content" >
+          <h2 id="namePlanet">    </h2>
+          <span id="descriptionInfo">   </span>
+          <p class="buttoncontainer"> <button id="testPhysic" class="custom-btn btn-12"><span>Click!</span><span>Test Physic</span> </button></p>
+        </div>
+      </div>
+      
+      <!-- GETTING THREE.JS AND PLUGINS VIA CDN(Content Delivery Network)-->
+      <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+      <script type="importmap">
+        {
+          "imports": {
+          "three": "https://unpkg.com/three@0.140.1/build/three.module.js"
+          }
+        }
+      </script>
+      <!-- MAIN SCRIPT CODE -->
+      <script type="module" src ="js/main.js"></script>
+  
+    </body>
+  </html>
+  
